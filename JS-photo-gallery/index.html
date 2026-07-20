@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Interactive Photo Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Interactive Photo Gallery</h1>
+
+        <div id="image">
+            Hover over an image below to display here.
+        </div>
+
+        <div class="gallery">
+            <img
+                class="preview"
+                src="https://picsum.photos/id/1015/500/300"
+                alt="Mountain landscape beside a river"
+                onmouseover="upDate(this)"
+                onmouseout="unDo()"
+            >
+
+            <img
+                class="preview"
+                src="https://picsum.photos/id/1016/500/300"
+                alt="Mountain trail surrounded by nature"
+                onmouseover="upDate(this)"
+                onmouseout="unDo()"
+            >
+
+            <img
+                class="preview"
+                src="https://picsum.photos/id/1025/500/300"
+                alt="A dog looking toward the camera"
+                onmouseover="upDate(this)"
+                onmouseout="unDo()"
+            >
+
+            <img
+                class="preview"
+                src="https://picsum.photos/id/1035/500/300"
+                alt="Calm lake surrounded by mountains"
+                onmouseover="upDate(this)"
+                onmouseout="unDo()"
+            >
+
+            <img
+                class="preview"
+                src="https://picsum.photos/id/1043/500/300"
+                alt="Forest landscape under a bright sky"
+                onmouseover="upDate(this)"
+                onmouseout="unDo()"
+            >
+
+            <img
+                class="preview"
+                src="https://picsum.photos/id/1069/500/300"
+                alt="Rocky coastline beside the ocean"
+                onmouseover="upDate(this)"
+                onmouseout="unDo()"
+            >
+        </div>
+    </main>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

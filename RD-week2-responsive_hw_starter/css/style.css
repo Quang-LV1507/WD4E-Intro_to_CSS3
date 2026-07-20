@@ -1,144 +1,87 @@
+* {
+    box-sizing: border-box;
+}
 
 body {
+    margin: 0;
+    padding: 15px;
     background-color: #dedede;
 }
 
 h1 {
     text-align: center;
-    font-family:Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 32px;
 }
 
+h2 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
 a {
-    color: #000;
+    color: #000000;
     text-decoration: none;
-    font-family:Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-p {
-   font-size: 25px;
-   font-family:Arial, sans-serif;
+p,
+li {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
 }
 
-img{
-  width:100%;
-}
-
-
-p{
-  text-align:center;
-}
-
-div img{
-    width:150px;
-    height: 150px;
-    display:block;
-    margin:auto;
-}
-
-div{
-  display: inline-block;
-  width: 24%;
-  margin: 5px;
-  padding: 2px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
 main {
-    border: 5px #000 solid;
-    margin: 10px;
+    text-align: center;
 }
- */
-/* 
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
+main ul {
+    text-align: left;
 }
- */
-/* img{
-    width: 200px;
-    height: 200px;
-    padding: 5px;
-} */
 
-/* .child {
-    position: relative;
-    display: inline-block;
-    border: 5px black solid;
-    margin: 5px;
-    border-radius: 5px;
-} */
-
-/* 
-
-.label {
-    display: none;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-} */
-/* 
-.button {
-    display: inline-block;
-    border: 2px solid #000;
-    padding: 5px;
-    border-radius: 25px;
-}
- */
-/* 
-.button:hover {
-    background-color:#fff;
-} */
-
-/* 
-footer {
-    display: flex;
-    justify-content: center;
-} */
-
-/* 
-header {
-    border-radius: 5px;
-    border: 5px #000 solid;
-    margin: 10px;
-} */
-
-/* 
-.label {
-    display: none;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-} */
-/* 
-.child:hover .label {
+/* Mobile view: one div per row */
+main > div {
     display: block;
-} */
+    width: 90vw;
+    margin: 15px auto;
+    padding: 5px;
+    vertical-align: top;
+}
+
+main > div img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.label {
+    text-align: center;
+}
+
+/* Tablet view: two divs per row */
+@media screen and (min-width: 772px) {
+    main > div {
+        display: inline-block;
+        width: 45vw;
+        margin: 5px;
+    }
+
+    main > div img {
+        width: auto;
+        max-width: 100%;
+        max-height: 30vh;
+    }
+}
+
+/* Large screen view: three divs per row */
+@media screen and (min-width: 998px) {
+    main > div {
+        width: 30vw;
+    }
+}
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+}

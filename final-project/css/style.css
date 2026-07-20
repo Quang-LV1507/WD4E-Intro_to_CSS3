@@ -1,1 +1,428 @@
+/* =========================
+   CÀI ĐẶT CHUNG
+========================= */
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #17324d;
+    background-color: #f4fbff;
+}
+
+
+/* =========================
+   SKIP TO MAIN CONTENT
+========================= */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    z-index: 1000;
+
+    padding: 12px 18px;
+
+    color: #ffffff;
+    background-color: #17324d;
+
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 20px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    padding: 35px 20px 25px;
+
+    color: #ffffff;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #0e7490,
+        #2563a8
+    );
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.7rem;
+}
+
+header p {
+    margin: 5px 0 20px;
+}
+
+
+/* =========================
+   NAVIGATION DÙNG FLEX
+========================= */
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nav-list a {
+    display: block;
+
+    padding: 10px 18px;
+
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+
+    border: 2px solid transparent;
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s,
+        color 0.3s,
+        transform 0.3s,
+        border-color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #174f78;
+    background-color: #ffffff;
+    border-color: #f5c451;
+
+    transform: translateY(-3px);
+}
+
+.nav-list a:focus {
+    outline: 4px solid #f5c451;
+    outline-offset: 3px;
+}
+
+.nav-list .active {
+    color: #17324d;
+    background-color: #f5c451;
+}
+
+
+/* =========================
+   NỘI DUNG CHÍNH
+========================= */
+
+main {
+    width: min(1100px, 92%);
+    margin: 40px auto;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #174f78;
+    text-align: center;
+}
+
+
+/* =========================
+   HERO DÙNG GRID 2 CỘT
+========================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+
+    padding: 30px;
+
+    background-color: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(23, 50, 77, 0.12);
+}
+
+.hero h2 {
+    text-align: left;
+    font-size: 2.2rem;
+}
+
+.button {
+    display: inline-block;
+
+    margin-top: 12px;
+    padding: 12px 20px;
+
+    color: #ffffff;
+    background-color: #e87927;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s,
+        background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #bd4f15;
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   ÁP DỤNG CHO TẤT CẢ ẢNH
+========================= */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    padding: 6px;
+
+    background-color: #ffffff;
+
+    border: 4px solid #69b7d1;
+    border-radius: 18px;
+}
+
+
+/* =========================
+   PHẦN GIỚI THIỆU
+========================= */
+
+.introduction {
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #dff4fb;
+
+    border-left: 8px solid #e87927;
+    border-radius: 15px;
+}
+
+
+/* =========================
+   CÁC Ô NỔI BẬT TRANG CHỦ
+========================= */
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.highlight-card {
+    padding: 20px;
+
+    background-color: #ffffff;
+
+    border-top: 6px solid #69b7d1;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 18px rgba(23, 50, 77, 0.12);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 25px rgba(23, 50, 77, 0.2);
+}
+
+.highlight-card h3 {
+    color: #0e7490;
+}
+
+
+/* nth-child áp dụng màu khác nhau */
+
+.highlight-card:nth-child(2) {
+    border-top-color: #f5c451;
+}
+
+.highlight-card:nth-child(3) {
+    border-top-color: #e87927;
+}
+
+
+/* =========================
+   TRANG HOẠT ĐỘNG
+========================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    padding: 18px;
+
+    background-color: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 18px rgba(23, 50, 77, 0.12);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(23, 50, 77, 0.2);
+}
+
+.card h3 {
+    color: #0e7490;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+
+/* =========================
+   THƯ VIỆN ẢNH DÙNG GRID
+========================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery figure {
+    margin: 0;
+    padding: 12px;
+
+    background-color: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 18px rgba(23, 50, 77, 0.12);
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+
+    transition:
+        transform 0.3s,
+        filter 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+    filter: brightness(1.08);
+}
+
+.gallery figcaption {
+    padding: 12px 5px 5px;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* nth-child thay đổi bo góc ảnh */
+
+.gallery figure:nth-child(odd) img {
+    border-radius: 35px 8px;
+}
+
+.gallery figure:nth-child(even) img {
+    border-radius: 8px 35px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 20px;
+
+    color: #ffffff;
+    background-color: #17324d;
+
+    text-align: center;
+}
+
+
+/* =========================
+   HIỂN THỊ TRÊN MÀN HÌNH NHỎ
+========================= */
+
+@media screen and (max-width: 750px) {
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        text-align: center;
+    }
+
+    .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}

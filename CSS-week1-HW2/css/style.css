@@ -21,8 +21,20 @@ h1 {
     text-transform: uppercase;
 }
 
+/*
+li {
+    display: inline-block;
+}
+*/
+
 nav {
+    display: inline-block;
+    width: 80%;
     margin-top: 20px;
+}
+
+nav img {
+    width: 10%;
 }
 
 nav a {
@@ -66,6 +78,47 @@ img {
     margin: 10px;
     border: 3px solid #17496b;
     border-radius: 6px;
+}
+
+/* Skip to Main Content */
+
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid #000000;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Grid layout */
+
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.grid img {
+    width: 100%;
+}
+
+/* Flex layout */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
 }
 
 footer {
